@@ -1,0 +1,37 @@
+@import './variables.scss';
+.filmsPage {
+  display: flex;
+  justify-content: center;
+  .filmsPageContainer {
+    width: 980px;
+    .genresContainer {
+      padding-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      .genre {
+        padding: 10px 20px;
+        border: 1px solid $grey81;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+      }
+    }
+    .filmsContainer {
+      @include media(desktop) {
+        padding-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      @include media(mobile) {
+        padding-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-evenly;
+      }
+    }
+  }
+  
+}

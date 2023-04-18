@@ -1,0 +1,202 @@
+@import "./variables";
+#header {
+  background-color: #062541;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  @include media(desktop) {
+    width: 100%;
+    height: 78px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 900;
+    .headerContainer {
+      width: 980px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      .logoContainer {
+        flex-shrink: 0;
+        height: 100%;
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100px;
+          height: auto;
+        }
+      }
+      .menu {
+        margin-left: 50px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 14px;
+        .link {
+          color: white;
+          font-weight: 600;
+          display: flex;
+          height: 100%;
+          align-items: center;
+          text-align: center;
+          max-width: 140px;
+          padding: 0 20px;
+          &.active {
+            border-bottom: 3px solid $yellowD7;
+          }
+        }
+      }
+      .iconsContainer {
+        margin-left: auto;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        .icons {
+          cursor: pointer;
+          color: white;
+          font-size: 30px;
+        }
+        .icon-logout {
+          color: white;
+          cursor: pointer;
+          font-size: 24px;
+        }
+      }
+      .dropDownContainer {
+        padding: 40px 20px;
+        position: absolute;
+        box-shadow: $box-shadow;
+        background-color: #062541;
+        top: 78px;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        .searchInput {
+          border-radius: 5px;
+          padding: 10px;
+          border: 1px solid $greyE1;
+          width: 100%;
+          color: white;
+          font-size: 18px;
+          &::placeholder {
+            color: $grey81;
+          }
+        }
+        .searchList {
+          overflow: scroll;
+          height: calc(100% - 70px);
+          margin-top: 20px;
+          .item {
+            width: 100%;
+            display: block;
+            padding: 5px 0;
+            color: white;
+            &:hover {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media(mobile) {
+    width: 100%;
+    height: 78px;
+    border-bottom: 1px solid $grey81;
+    display: flex;
+    z-index: 900;
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    .headerContainer {
+      padding: 0 20px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      .logoContainer {
+        flex-shrink: 0;
+        margin-right: auto;
+        img {
+          width: 100px;
+          height: auto;
+        }
+      }
+      .menu {
+        margin: 0;
+        padding: 20px;
+        position: fixed;
+        top: 78px;
+        left: 0;
+        height: calc(100vh - 78px);
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        background-color: $grey1F;
+        .link {
+          font-weight: 600;
+          height: 48px;
+          flex-shrink: 0;
+          display: flex;
+          color: white;
+          align-items: center;
+        }
+      }
+      .iconsContainer {
+        margin-left: auto;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        .icons {
+          cursor: pointer;
+          color: white;
+          font-size: 30px;
+        }
+      }
+    }
+    .dropDownContainer {
+      padding: 20px;
+      position: absolute;
+      box-shadow: $box-shadow;
+      background-color: #062541;
+      top: 78px;
+      width: 100%;
+      left: 0;
+      border-radius: 0 0 10px 10px;
+      .searchInput {
+        border-radius: 5px;
+        padding: 10px;
+        border: 1px solid $greyE1;
+        width: 100%;
+        color: white;
+        font-size: 18px;
+        &::placeholder {
+          color: $grey81;
+        }
+      }
+      .searchList {
+        overflow: scroll;
+        height: calc(100% - 70px);
+        margin-top: 20px;
+        .item {
+          width: 100%;
+          display: block;
+          padding: 5px 0;
+          color: white;
+          &:hover {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

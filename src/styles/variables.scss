@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@mixin media($type) {
+  $desktop: 1025px;
+  $smallMin: 0;
+  @if $type == desktop {
+    @media only screen and (min-width: $desktop) {
+      @content;
+    }
+  } @else if $type == mobile {
+    @media only screen and (max-width: $desktop - 1) {
+      @content;
+    }
+  }
+}
+
+body {
+  font-family: 'Robotto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../assets/fonts/icomoon.ttf');
+  src: url('../assets/fonts/icomoon.eot?t76gdo#iefix')
+  format('embedded-opentype'), url('../assets/fonts/icomoon.ttf?t76gdo')
+  format('truetype'), url('../assets/fonts/icomoon.woff?t76gdo')
+  format('woff'), url('../assets/fonts/icomoon.svg?t76gdo#icomoon')
+  format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  font-variant: normal;
+}
+
+.icons {
+  font-family: 'icomoon', monospace;
+  speak: never;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &.icon-phone_callback:before { content: "\e90q" }
+  &.icon-arrow_outward:before { content: "\e902" }
+  &.icon-chevron_right:before { content: "\e903" }
+  &.icon-chevron_left:before { content: "\e904" }
+  &.icon-user:before { content: "\e971" }
+  &.icon-done:before { content: "\e905" }
+  &.icon-search_off:before { content: "\e906" }
+  &.icon-add:before { content: "\e907" }
+  &.icon-remove:before { content: "\e908" }
+  &.icon-download:before { content: "\e909" }
+  &.icon-close:before { content: "\e90a" }
+  &.icon-menu:before { content: "\e90b" }
+  &.icon-search:before { content: "\e900" }
+  &.icon-logout:before { content: "\ea14" }
+  &.icon-star:before { content: "\e9d9" }
+}
+
+//COLORS
+$greyF7: #F7F5F5;
+$greyCB: #CBCBCB;
+$grey79: #797979;
+$grey21: #212529;
+$grey1F: #1F2632;
+$yellowEB: #EBBE23;
+$yellowE1: #E1A032;
+$yellowD7: #D77D37;
+$orangeE2: #E27622;
+$redCD: #CD5537;
+$grey52: #525A6E;
+$redC3: #C32737;
+.white { color: white }
+.error { color: $redC3 !important }
+.succes { color: $orangeE2; text-align: center; }
+
+$white-15: rgba(255, 255, 255, 0.15);
+$greyF5: #F5F6FA;
+$greyF6: #F6F6F6;
+$greyF0: #F0F2F5;
+$greyEB: #EBEDF0;
+$greyEE: #EEEFF0;
+$greyE1: #E1E1E1;
+$greyDF: #DFE6EC;
+$greyB2: #B2BECD;
+$grey81: #818BA5;
+$grey37: #373D4D;
+$grey26: #26282D;
+$greyDF: #DFE6EC;
+$blueB0: #d5d6d8;
+$black07: #071516;
+$greyDe: #DEDEDE;
+$grey57: #57617A;
+$blue1C: #1C37E0;
+$blue19: #199DFF;
+$green22: #22D089;
+$green01: #018e98;
+$orange: #FFB500;
+$orangeE2: #e27e5c;
+$red: #FF5F7E;
+$shadow198-03: rgba(198, 203, 208, 0.3);
+$shadow198-05: rgba(198, 203, 208, 0.5);
+$shadow38-04: rgba(38, 40, 45, 0.4);
+$shadow38-08: rgba(38, 40, 45, 0.8);
+$rgba25: rgba(25,157,255,0.05);
+
+$box-shadow:  rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;

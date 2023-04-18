@@ -1,0 +1,125 @@
+@import './variables.scss';
+.actorPage {
+  @include media(desktop) {
+    .wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 128px;
+      padding-bottom: 100px;
+      .container {
+        width: 980px;
+        display: flex;
+        gap: 50px;
+        .poster {
+          border-radius: 20px;
+          align-self: flex-start;
+        }
+        .infos {
+          color: white;
+          .name {
+            margin-bottom: 10px;
+          }
+          .biography {
+            color: $grey81;
+            margin-top: 30px;
+          }
+        }
+        .castContainer {
+          width: 100%;
+          margin-top: 80px;
+          .castContainerTitle {
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+          }
+          .castList {
+            box-shadow: $box-shadow;
+            border-radius: 15px;
+            width: 100%;
+            .cast {
+              display: flex;
+              color: $grey81;
+              padding: 15px 20px;
+              .castDate {
+                border-right: 1px solid $grey81;
+                padding-right: 20px;
+                margin-right: 20px;
+                color: white;
+              }
+              .castChar {
+                margin-left: 20px;
+                text-decoration: underline;
+              }
+              &:not(:last-child) {
+                border-bottom: 1px solid $grey81;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media(mobile) {
+    .wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 60px 20px;
+      .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .poster {
+          border-radius: 20px;
+          width: 75%;
+          max-width: 350px;
+          align-self: center;
+        }
+        .infos {
+          color: white;
+          .name {
+            margin-bottom: 10px;
+          }
+          .biography {
+            color: $grey81;
+            margin-top: 30px;
+          }
+        }
+        .castContainer {
+          width: 100%;
+          margin-top: 80px;
+          .castContainerTitle {
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+          }
+          .castList {
+            box-shadow: $box-shadow;
+            border-radius: 15px;
+            width: 100%;
+            .cast {
+              color: $grey81;
+              padding: 15px 20px;
+              .castDate {
+                color: white;
+                border-bottom: 1px solid $grey81;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+              }
+              .castChar {
+                text-decoration: underline;
+              }
+              &:not(:last-child) {
+                border-bottom: 1px solid $grey81;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

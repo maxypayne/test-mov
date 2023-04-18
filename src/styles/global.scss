@@ -1,0 +1,17 @@
+@import './variables.scss';
+.page {
+  @include media(desktop) {
+    margin: 78px 0 100px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    .pageContainer {
+      width: 980px;
+    }
+  }
+  @include media(mobile) {
+
+  }
+}

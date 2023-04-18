@@ -1,0 +1,69 @@
+@import './variables.scss';
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth
+}
+body {
+  background-color: $grey1F;
+  font-family: 'Roboto Light', sans-serif, Arial;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+input {
+  -webkit-appearance: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+a, article, aside, body, div, fieldset, footer, form, h1, h2, h3, h4, h5, header, html, img, input, label, li, menu, nav, ol, p, section, span, strong, table, tbody, td, tfoot, th, thead, tr, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 400
+}
+
+:focus {
+  outline: 0
+}
+
+button, input, select, textarea {
+  font: unset
+}
+select {
+  border:none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 999px #fff !important
+}
+
+article, aside, footer, header, menu, nav, section {
+  display: block
+}
+
+ol, ul {
+  list-style: none
+}
+
+button {
+  background-color: transparent;
+  border-width: 0
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+a {
+  text-decoration: none
+}

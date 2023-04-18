@@ -1,0 +1,98 @@
+@import './variables.scss';
+.home {
+  @include media(desktop) {
+    margin-top: 78px;
+    .movie{ 
+      position: relative;
+      margin-bottom: -6px;
+      .movieImage {
+        width: 100vw;
+        height: auto;
+      }
+      .movieInfos {
+        position: absolute;
+        top: 100px;
+        max-width: 35vw;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(#000000, 0.7);
+        padding: 40px 30px;
+        box-shadow: $box-shadow;
+        border-radius: 20px;
+        &.odd {
+          right: 100px;
+        }
+        &.even {
+          left: 100px;
+        }
+        .title {
+          color: white;
+          font-size: 30px;
+          text-transform: uppercase;
+        }
+        .content {
+          margin-top: 20px;
+          color: white;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+        }
+        .cta {
+          align-self: flex-end;
+          background-color: #f29801;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 10px;
+          margin-top: 20px;
+
+        }
+      }
+    }
+  }
+  @include media(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .movie{ 
+      position: relative;
+      margin-bottom: -6px;
+      .movieImage {
+        width: 100vw;
+        height: auto;
+        margin-bottom: -10px;
+      }
+      .movieInfos {
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(#000000, 0.7);
+        padding: 40px 20px;
+        box-shadow: $box-shadow;
+        .title {
+          color: white;
+          font-size: 24px;
+          text-transform: uppercase;
+        }
+        .content {
+
+          margin-top: 20px;
+          color: white;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+        }
+        .cta {
+          align-self: flex-end;
+          background-color: #f29801;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 10px;
+          margin-top: 20px;
+
+        }
+      }
+    }
+  }
+}

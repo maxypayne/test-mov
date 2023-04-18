@@ -1,0 +1,22 @@
+@import './variables.scss';
+.movieCard {
+  width: 310px;
+  box-shadow: $box-shadow;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  .imgContainer {
+    height: 450px;
+    width: 310px;
+    overflow: hidden;
+    background-size: cover;
+  }
+  .movieCardData {
+    padding: 15px;
+    color: $grey81;
+    .movieCardTitle {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
